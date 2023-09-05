@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
@@ -16,12 +16,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/room/:roomID",
-    element: <Roompage></Roompage>
+    element: <Roompage></Roompage>,
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
 )

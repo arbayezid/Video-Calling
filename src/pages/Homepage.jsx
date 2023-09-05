@@ -13,7 +13,7 @@ const Homepage = () => {
     return (
         <div>
             <input
-                value={value}
+                
                 onChange={(e) => setValue(e.target.value)}
                 type="text" placeholder="Enter Room ID" />
             <button onClick={handleJoinRoom}>Join</button>
@@ -22,3 +22,21 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

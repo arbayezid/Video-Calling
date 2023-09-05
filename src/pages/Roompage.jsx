@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt'
-import "../App.css"
 
 const Roompage = () => {
     const { roomID } = useParams()
 
     const myMeeting = async (element) => {
+        console.log("element",element)
         const appID = 315105672;
         const serverSecret = "69a685f6fd059679530430cf342bad80";
-        const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, Date.now().toString(), "Bayezid")
+        const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, Date.now().toString(),"Bayezid")
 
         const zc = ZegoUIKitPrebuilt.create(kitToken);
         zc.joinRoom({
@@ -26,7 +26,7 @@ const Roompage = () => {
         });
     };
     return (
-        <div className="room">
+        <div className="">
             <div ref={myMeeting} />
         </div>
     );
